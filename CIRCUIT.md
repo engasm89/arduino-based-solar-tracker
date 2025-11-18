@@ -1,37 +1,16 @@
-# Arduino Based Solar Tracker — Circuit Schematic
+# Arduino Based Solar Tracker — Circuit Notes
 
-- Course: Arduino Based Solar Tracker
-- Author: Ashraf S A AlMadhoun
-- Link: https://www.udemy.com/course/arduino-based-solar-tracker/?couponCode=JULYMAXDICOUNT
+| Signal | Suggested Pin | Notes |
+| --- | --- | --- |
+| Sensor Input | A0 / GPIO | Adjust according to the Arduino board you own. |
+| Actuator Output | D9 / PWM Pin | Use a transistor/driver for high-current loads. |
+| Status LED | D13 or onboard LED | Mirrors the runtime state for quick debugging. |
 
-## Connections
+## Wiring Checklist
 
-- LDR Left: voltage divider to `A0` (e.g., LDR + 10k resistor).
-- LDR Right: voltage divider to `A1`.
-- Servo signal → `D9`, power from external 5–6V, common ground.
+1. Power rails first (5V / 3.3V and GND).
+2. Route sensor outputs to the analog/digital pin noted above.
+3. Add current-limiting resistors where appropriate.
+4. Double-check common grounds between modules and the development board.
 
-## Diagram (ASCII)
-
-```
- LDRL --/\/\--+---- A0       Arduino UNO        Servo
-               |                     D9 ---- SIG
-             [10k]                   5V ---- VCC
-               |                     GND --- GND
-              GND
-
- LDRR --/\/\--+---- A1
-               |
-             [10k]
-               |
-              GND
-```
-
-## Notes
-
-- Use identical resistors in the voltage dividers for consistent readings.
-- Calibrate the sensor shields and physical placement.
-
-## Purchase With Discount
-
-Start building with the discounted course — use the link above.
-
+Refer to the course lecture for the exact schematic; reuse these notes as a quick reference.

@@ -1,3 +1,11 @@
+/*
+ * Course: Arduino Based Solar Tracker
+ * Platform: Arduino
+ * Author: Ashraf S A AlMadhoun
+ * Purpose: Auto-generated metadata block to document the learning goals.
+ * Notes: Auto-generated metadata block (2025-11-18)
+ */
+
 #include <stdio.h> // Serial
 
 #define OUTPUT 1 // Output
@@ -47,6 +55,7 @@ void loop(void) { // Main loop
   delay(200); // Sampling interval
 }
 
+// Main routine: orchestrates the arduino based solar tracker scenario
 int main(void) { // Entry
   setup(); // Init
   for (int i = 0; i < 20; ++i) { // Simulated cycles
